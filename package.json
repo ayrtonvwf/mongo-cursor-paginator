@@ -28,6 +28,7 @@
     "typescript": "^4.1.3"
   },
   "engines": {
+    "npm": "please-use-yarn",
     "yarn": ">= 1.22.5"
   }
 }
