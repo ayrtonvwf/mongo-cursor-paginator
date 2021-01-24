@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ayrtonvwf/mongo-cursor-paginator/issues"
   },
-  "homepage": "https://github.com/ayrtonvwf/mongo-cursor-paginator#readme"
+  "homepage": "https://github.com/ayrtonvwf/mongo-cursor-paginator#readme",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
 }
