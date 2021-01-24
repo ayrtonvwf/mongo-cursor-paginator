@@ -11,3 +11,4 @@ plugins:
   - '@typescript-eslint'
 rules:
   "complexity": ["error", 2]
+root: true
