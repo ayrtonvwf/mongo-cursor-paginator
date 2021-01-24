@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ayrtonvwf/mongo-cursor-paginator#readme",
   "devDependencies": {
+    "eslint": "^7.18.0",
     "typescript": "^4.1.3"
   }
 }
