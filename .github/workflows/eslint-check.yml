@@ -1,38 +1,17 @@
-name: Node CI environment
+name: ESLint Check
 
-on: [pull_request]
+on:
+  pull_request:
+    branches: [ main ]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x]
-
     steps:
-      - uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
+      - uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-#      - name: npm login
-#        run:
-#          npm config set //registry.npmjs.org/:_authToken=$NPM_READONLY_AUTH_TOKEN
-#        env:
-#          NPM_READONLY_AUTH_TOKEN: ${{ secrets.NPM_READONLY_AUTH_TOKEN }}
-
-      - name: yarn install
-        working-directory: .
-        run: yarn install --ignore-scripts
+      - name: Install modules
+        run: yarn
 
       - name: Run ESLint
-        uses: ninosaurus/eslint-check@v5
-        with:
-          eslint-config-path: "./.eslintrc.yml"
-          custom-directory: "./"
-          repo-token: ${{secrets.GITHUB_TOKEN}}
+        run: yarn lint
