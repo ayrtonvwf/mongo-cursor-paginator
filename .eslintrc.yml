@@ -12,3 +12,5 @@ plugins:
 rules:
   "complexity": ["error", 2]
 root: true
+ignorePatterns:
+  - '**/*.test.ts'

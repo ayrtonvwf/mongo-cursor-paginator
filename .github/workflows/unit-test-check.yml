@@ -1,0 +1,17 @@
+name: Unit Test Check
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install modules
+        run: yarn
+
+      - name: Run ESLint
+        run: yarn test
