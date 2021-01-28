@@ -1,0 +1,17 @@
+name: Dependency Check
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  dependency-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install modules
+        run: yarn
+
+      - name: Run Dependency Check
+        run: yarn depcheck
