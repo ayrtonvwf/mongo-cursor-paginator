@@ -15,3 +15,14 @@ jobs:
 
       - name: Run ESLint
         run: yarn test
+
+  coverage-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install modules
+        run: yarn
+
+      - name: Test Coverage
+        run: yarn coverage
