@@ -7,7 +7,8 @@
     "test": "mocha --reporter spec --require ts-node/register 'src/**/*.test.ts'",
     "lint": "npx eslint . --ext .ts",
     "build": "npx tsc",
-    "fix": "npx eslint . --ext .ts --fix"
+    "fix": "npx eslint . --ext .ts --fix",
+    "coverage": "nyc yarn test"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/ayrtonvwf/mongo-cursor-paginator#readme",
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.2.0",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
@@ -29,6 +31,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
   },
