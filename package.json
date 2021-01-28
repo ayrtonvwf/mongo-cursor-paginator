@@ -7,7 +7,8 @@
     "test": "mocha --reporter spec --require ts-node/register 'src/**/*.test.ts'",
     "lint": "npx eslint . --ext .ts",
     "build": "npx tsc",
-    "fix": "npx eslint . --ext .ts --fix"
+    "fix": "npx eslint . --ext .ts --fix",
+    "coverage": "nyc yarn test"
   },
   "repository": {
     "type": "git",
