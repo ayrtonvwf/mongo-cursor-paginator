@@ -41,4 +41,14 @@ export type PaginationConfig = {
   order: PaginationOrder
 }
 
-export type paginate = <T extends Object>(config: PaginationConfig) => Promise<Connection<T>>
+export const paginate = async <T extends Object>(config: PaginationConfig): Promise<Connection<T>> => {
+  return {
+    pageInfo: {
+      hasNextPage: false,
+      hasPreviousPage: false,
+      endCursor: null,
+      startCursor: null
+    },
+    edges: []
+  }
+}
