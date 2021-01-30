@@ -1,3 +1,13 @@
-export const helloWorld = (): string => 'Hello World';
+import { Connection, PaginationConfig } from './interface';
 
-export default helloWorld;
+export * from './interface';
+
+export const paginate = async <T extends Object>(config: PaginationConfig<T>): Promise<Connection<T>> => ({
+  pageInfo: {
+    hasNextPage: false,
+    hasPreviousPage: false,
+    endCursor: null,
+    startCursor: null,
+  },
+  edges: [],
+});

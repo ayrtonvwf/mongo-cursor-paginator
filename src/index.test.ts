@@ -1,17 +1,16 @@
-import defaultHelloWorld, { helloWorld } from './index';
+import { PaginationOrder } from './index';
 
-import * as mocha from 'mocha';
 import * as chai from 'chai';
 
 const expect = chai.expect;
-describe('The Hello World function', () => {
-  it('should greet us with' , () => {
-    expect(helloWorld()).to.equal('Hello World');
-  });
-});
 
-describe('The default export', () => {
-  it('should be equal to the named export', () => {
-    expect(helloWorld).to.equal(defaultHelloWorld)
+/**
+ * @see https://stackoverflow.com/a/38034825
+ */
+const enumLength = (value: Object) : number => Object.keys(value).length / 2;
+
+describe('The PaginationOrder', () => {
+  it('should include two options' , () => {
+    expect(enumLength(PaginationOrder)).to.equal(2);
   });
 });
