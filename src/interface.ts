@@ -1,4 +1,6 @@
-import {Collection, MongoClient, ProjectionOperators, QuerySelector} from 'mongodb';
+import {
+  Collection, ProjectionOperators, QuerySelector,
+} from 'mongodb';
 
 export type ForwardConnectionParams = {
   first: number
