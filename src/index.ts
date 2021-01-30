@@ -2,7 +2,7 @@ import {Connection, PaginationConfig} from "./interface";
 
 export * from './interface';
 
-export const paginate = async <T extends Object>(config: PaginationConfig): Promise<Connection<T>> => {
+export const paginate = async <T extends Object>(config: PaginationConfig<T>): Promise<Connection<T>> => {
   return {
     pageInfo: {
       hasNextPage: false,

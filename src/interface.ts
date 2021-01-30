@@ -24,7 +24,7 @@ export type PageInfo = {
   endCursor: string|null
 }
 
-export type Connection<T> = {
+export type Connection<T extends Object> = {
   pageInfo: PageInfo
   edges: Edge<T>[]
 }
@@ -34,7 +34,7 @@ export enum PaginationOrder {
   ASC = 1
 }
 
-export type PaginationConfig<T extends any> = {
+export type PaginationConfig<T extends Object> = {
   source: Collection
   params: ConnectionParams
   orderField: string
