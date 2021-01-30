@@ -1,4 +1,4 @@
-import {MongoClient, ProjectionOperators, QuerySelector} from 'mongodb';
+import {Collection, MongoClient, ProjectionOperators, QuerySelector} from 'mongodb';
 
 export type ForwardConnectionParams = {
   first: number
@@ -35,7 +35,7 @@ export enum PaginationOrder {
 }
 
 export type PaginationConfig<T extends any> = {
-  client: MongoClient
+  source: Collection
   params: ConnectionParams
   orderField: string
   order: PaginationOrder
