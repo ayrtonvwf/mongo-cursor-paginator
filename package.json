@@ -23,7 +23,7 @@
   "homepage": "https://github.com/ayrtonvwf/mongo-cursor-paginator#readme",
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
-    "@types/chai": "^4.2.14",
+    "@types/chai": "^4.2.15",
     "@types/mocha": "^8.2.0",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
