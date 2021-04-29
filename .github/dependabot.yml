@@ -1,0 +1,60 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "09:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - ayrtonvwf
+  assignees:
+  - ayrtonvwf
+  ignore:
+  - dependency-name: eslint
+    versions:
+    - 7.19.0
+    - 7.21.0
+    - 7.22.0
+    - 7.23.0
+    - 7.24.0
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.14.2
+    - 4.15.0
+    - 4.15.2
+    - 4.16.1
+    - 4.17.0
+    - 4.18.0
+    - 4.19.0
+    - 4.20.0
+    - 4.21.0
+  - dependency-name: "@typescript-eslint/parser"
+    versions:
+    - 4.14.2
+    - 4.15.0
+    - 4.15.2
+    - 4.16.1
+    - 4.17.0
+    - 4.18.0
+    - 4.19.0
+    - 4.20.0
+    - 4.21.0
+  - dependency-name: "@types/chai"
+    versions:
+    - 4.2.16
+  - dependency-name: mocha
+    versions:
+    - 8.3.1
+  - dependency-name: typescript
+    versions:
+    - 4.1.4
+    - 4.2.2
+    - 4.2.3
+  - dependency-name: chai
+    versions:
+    - 4.3.1
+    - 4.3.3
+  - dependency-name: "@types/mocha"
+    versions:
+    - 8.2.1
